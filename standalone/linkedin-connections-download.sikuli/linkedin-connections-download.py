@@ -1,5 +1,11 @@
 # NOTE: Press Alt+Shift+C to to kill a running Sikuli script.
 
+# CONST
+TARGET_DIR = "C:/Users/damien/Downloads/"
+# parameters
+if len(sys.argv) > 1:
+    TARGET_DIR = sys.argv[1]
+
 # browser
 runScript("../platform/cmd-run", 'firefox')
     
@@ -25,7 +31,7 @@ SCROLL_BUMP = 3
 scrollCounter = 0
 
 # START
-for x in range(10):
+for x in range(1):
     scrollCounter = scrollCounter + 1
     
     # OPEN NEW TAB
@@ -39,11 +45,12 @@ for x in range(10):
     # SWITCH TAB
     type("2", Key.CTRL)
     
-    # TAKE SCREENSHOT
+    # INIT DATAS
     runScript("../platform/linkedin-profile-getname", vertMargin)
     name = Env.getClipboard()
-    filename = name
-    runScript("../platform/linkedin-profile-screenshot-head", filename, vertMargin)
+
+    # TAKE HEADER SCREENSHOT
+    runScript("../platform/linkedin-profile-screenshot-head", TARGET_DIR + name + "-header.png", vertMargin)
     
     # CLOSE TAB
     type("1", Key.CTRL)
