@@ -12,14 +12,15 @@ if len(sys.argv) > 1:
      
 try:
     # init
-    wait("pinterest-create-button-2.png", 5)
+    #wait("pinterest-create-button-2.png", 5)
     
     # post
-    click("pinterest-create-button-1.png")
+    #click("pinterest-create-button-1.png")
     sleep(1)  
-    click("pinterest-pin-button.png")
+    #click("pinterest-pin-button.png")
+    runScript("../platform/firefox-url-goto", "https://fr.pinterest.com/pin-creation-tool/")
     sleep(1)
-
+    
     # add pict
     click("pinterest-create-upload.png")
     sleep(1)
