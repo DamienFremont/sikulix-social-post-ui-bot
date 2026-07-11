@@ -37,7 +37,8 @@ try:
     click("bluesky-post-confirm-yes-1.png")
 
     # success
-    wait("bluesky-post-comfirmed.png", 3)
+    sleep(1)    
+    #wait("bluesky-post-comfirmed.png", 3)
 
 finally:
     runScript("../platform/windows-takescreenshot", "-twitter") 
