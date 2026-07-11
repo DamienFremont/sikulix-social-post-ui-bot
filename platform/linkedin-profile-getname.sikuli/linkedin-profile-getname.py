@@ -31,4 +31,4 @@ click(location)
 
 # GET TEXT
 message_text = Env.getClipboard()
-print("LinkedIn getName() as: " +message_text)
+print("LinkedIn: Profile Name: " +message_text)

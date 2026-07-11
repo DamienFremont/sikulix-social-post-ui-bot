@@ -6,6 +6,11 @@ import shutil
 ARG_1 = "test-head.png"
 ARG_VERTICAL_MARGIN = "0"
 
+SCREENSHOT_REGION_X1 = 400
+SCREENSHOT_REGION_Y1 = 78
+SCREENSHOT_REGION_X2 = 1190
+SCREENSHOT_REGION_Y2 = 555
+
 # parameters
 if len(sys.argv) > 1:
     ARG_1 = sys.argv[1]
@@ -21,20 +26,16 @@ screen = Screen()
 type(Key.HOME)
 sleep(0.5)
 
-x1 = 390
-y1 = 78
-x2 = 1190
-y2 = 555
-
-x = x1
-y = y1 + int(ARG_VERTICAL_MARGIN)
-w = x2 - x1
-h = y2 - y
+x = SCREENSHOT_REGION_X1
+y = SCREENSHOT_REGION_Y1 + int(ARG_VERTICAL_MARGIN)
+w = SCREENSHOT_REGION_X2 - SCREENSHOT_REGION_X1
+h = SCREENSHOT_REGION_Y2 - SCREENSHOT_REGION_Y1
 
 region = Region(x, y, w, h)
 file = screen.saveCapture(region)
 
 # moves img to destination
-shutil.move(file, file + "-" + ARG_1)
+shutil.move(file, ARG_1)
 
-print("Saved screen as " + file)
+print("LinkedIn: Profile temp saved at: " + file)
+print("LinkedIn: Profile Header saved at: " + ARG_1)
