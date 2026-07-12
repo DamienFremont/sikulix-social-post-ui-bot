@@ -75,22 +75,29 @@ for x in range(PARAM_PROFILES_SKIP):
     sleep(1)
 
 # DOWNLOAD PROFILES ***********************************************************
-# START
+
 for x in range(PARAM_PROFILES_TODO):
     profil_scroll_iteration = profil_scroll_iteration + 1
+
+    # OPEN LINKEDIN PROFILE ***************************************************
     
     # OPEN NEW TAB
-    region = Region(450, 215 + int(vertMargin))
+    # select profil
+    region = Region(460, 110 + int(vertMargin))
+    # emulate middle click or ctrl+click
     rightClick(region)
     sleep(0.5)
-    region = Region(470, 215 + 25 + int(vertMargin))
+    region = Region(460, 110 + 25 + int(vertMargin))
     rightClick(region)
     sleep(1)
-    
-    # SWITCH TAB
+    # switch to new tab
     type("2", Key.CTRL)
     
-    # INIT DATAS
+    # SAVE LINKEDIN PROFILE INFOS *********************************************
+    
+    # INIT
+    # TODO: runScript("../platform/firefox-current-url")
+    #url = Env.getClipboard()
     runScript("../platform/linkedin-profile-getname", vertMargin)
     name = Env.getClipboard()
     # TODO: external script ?
@@ -100,21 +107,26 @@ for x in range(PARAM_PROFILES_TODO):
     questionmark_replaced = ascii_bytes_replaced.replace("?", "");
     name = questionmark_replaced
     
-    # TAKE HEADER SCREENSHOT
+    # SAVE DATAS
+    # TAKE HEADER SCREENSHOT    
     runScript("../platform/linkedin-profile-screenshot-head", PARAM_TARGET_DIR + name + "-header.png", vertMargin)
+    # TODO: TAKE THUMBNAIL SCREENSHOT
+    # TODO: DOWNLOAD CV /details/experience/
+            
+    # NEXT LINKEDIN PROFILE ***************************************************
     
     # CLOSE TAB
     type("1", Key.CTRL)
     sleep(0.5)
     
-    # SCROLL
+    # SCROLL NEXT PROFILE
+    print("LinkedIn: scrool to next profil")    
     type(Key.DOWN)
     type(Key.DOWN)
     type(Key.DOWN)
-    if (profil_scroll_iteration == SCROLL_BUMP):
+    if (profil_scroll_iteration == SCROLL_BUMP_EVERY_OTHER_PROFIL):
         type(Key.DOWN)
         profil_scroll_iteration = 0
-        print("Key.DOWN screen as ")
     sleep(1)
     
 # END
