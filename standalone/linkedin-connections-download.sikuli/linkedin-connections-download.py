@@ -6,25 +6,27 @@ TARGET_DIR = "C:/Users/damien/Downloads/"
 if len(sys.argv) > 1:
     TARGET_DIR = sys.argv[1]
 
-# browser
-runScript("../platform/cmd-run", 'firefox')
-    
-# LOAD
-type("l", KeyModifier.CTRL)
-paste("https://www.linkedin.com/mynetwork/invite-connect/connections/")
-type(Key.ENTER)
-sleep(1)
+# INIT BROWSER ****************************************************************
 
+# browser
+runScript("../platform/cmd-run", 'firefox')    
+runScript("../platform/windows-maximize")
+type(Key.F11) # fullscreen
+
+# TODO: external script ?
 # RESET ZOOM
 type("0", Key.CTRL)
 sleep(0.5)
 type(Key.HOME)
 sleep(0.5)
 
-# FULL SCREEN
-type(Key.F11)
-VERTICAL_MARGIN_FULLSCREEN = "0"
-vertMargin = VERTICAL_MARGIN_FULLSCREEN
+# GET LINKEDIN CONNECTIONS ****************************************************
+
+# LOAD
+type("l", KeyModifier.CTRL)
+paste("https://www.linkedin.com/mynetwork/invite-connect/connections/")
+type(Key.ENTER)
+sleep(1)
 
 # SCROLLING
 SCROLL_BUMP = 3
