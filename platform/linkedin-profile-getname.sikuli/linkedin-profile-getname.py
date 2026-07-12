@@ -33,4 +33,11 @@ click(location)
 
 # GET TEXT
 message_text = Env.getClipboard()
-print("LinkedIn: Profile Name: " +message_text)
+
+# TODO: external script ?
+# Encoding with ASCII and replacing errors - DATA ALTERED!
+message_text.encode('utf-8')
+ascii_bytes_replaced = message_text.encode('ascii', errors='replace')
+questionmark_replaced = ascii_bytes_replaced.replace("?", "");
+
+print("LinkedIn: Profile Name: " + questionmark_replaced)
