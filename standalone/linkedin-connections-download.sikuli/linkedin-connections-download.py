@@ -48,7 +48,13 @@ for x in range(1):
     # INIT DATAS
     runScript("../platform/linkedin-profile-getname", vertMargin)
     name = Env.getClipboard()
-
+    # TODO: external script ?
+    # Encoding with ASCII and replacing errors - DATA ALTERED!
+    message_text.encode('utf-8')
+    ascii_bytes_replaced = message_text.encode('ascii', errors='replace')
+    questionmark_replaced = ascii_bytes_replaced.replace("?", "");
+    name = questionmark_replaced
+    
     # TAKE HEADER SCREENSHOT
     runScript("../platform/linkedin-profile-screenshot-head", TARGET_DIR + name + "-header.png", vertMargin)
     
