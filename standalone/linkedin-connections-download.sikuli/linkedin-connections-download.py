@@ -1,10 +1,16 @@
 # NOTE: Press Alt+Shift+C to to kill a running Sikuli script.
 
-# CONST
-TARGET_DIR = "C:/Users/damien/Downloads/"
-# parameters
-if len(sys.argv) > 1:
-    TARGET_DIR = sys.argv[1]
+# PARAMETERS
+PARAM_TARGET_DIR = "C:/Users/damien/Downloads/linkedIn/"
+PARAM_PROFILES_TODO = 20
+if len(sys.argv) > 2:
+    PARAM_TARGET_DIR = sys.argv[1]
+    PARAM_PROFILES_TODO = sys.argv[2]
+
+# INIT TARGET FOLDER **********************************************************
+
+if not os.path.exists(PARAM_TARGET_DIR):
+    os.makedirs(PARAM_TARGET_DIR)
 
 # INIT BROWSER ****************************************************************
 
@@ -33,7 +39,7 @@ SCROLL_BUMP = 3
 scrollCounter = 0
 
 # START
-for x in range(1):
+for x in range(PARAM_PROFILES_TODO):
     scrollCounter = scrollCounter + 1
     
     # OPEN NEW TAB
@@ -58,7 +64,7 @@ for x in range(1):
     name = questionmark_replaced
     
     # TAKE HEADER SCREENSHOT
-    runScript("../platform/linkedin-profile-screenshot-head", TARGET_DIR + name + "-header.png", vertMargin)
+    runScript("../platform/linkedin-profile-screenshot-head", PARAM_TARGET_DIR + name + "-header.png", vertMargin)
     
     # CLOSE TAB
     type("1", Key.CTRL)
