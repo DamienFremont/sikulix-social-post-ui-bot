@@ -3,9 +3,11 @@
 # PARAMETERS
 PARAM_TARGET_DIR = "C:/Users/damien/Downloads/linkedIn/"
 PARAM_PROFILES_TODO = 20
+PARAM_PROFILES_SKIP = 0
 if len(sys.argv) > 2:
     PARAM_TARGET_DIR = sys.argv[1]
     PARAM_PROFILES_TODO = sys.argv[2]
+    PARAM_PROFILES_SKIP = sys.argv[3]
 
 # INIT TARGET FOLDER **********************************************************
 
@@ -26,6 +28,9 @@ sleep(0.5)
 type(Key.HOME)
 sleep(0.5)
 
+VERTICAL_MARGIN_FULLSCREEN = "0"
+vertMargin = VERTICAL_MARGIN_FULLSCREEN
+
 # GET LINKEDIN CONNECTIONS ****************************************************
 
 # LOAD
@@ -34,13 +39,45 @@ paste("https://www.linkedin.com/mynetwork/invite-connect/connections/")
 type(Key.ENTER)
 sleep(1)
 
-# SCROLLING
-SCROLL_BUMP = 3
-scrollCounter = 0
+# unfocus
+type(Key.ESC)
 
+# SCROLLING
+SCROLL_BUMP_EVERY_OTHER_PROFIL = 3
+profil_scroll_iteration = 0
+
+# SKIP PROFILES ***************************************************************
+
+# FOCUS BODY / UNFOCUS HEADER
+BODY_FOCUS_REGION_X = 300
+BODY_FOCUS_REGION_Y = 330
+location = Location(BODY_FOCUS_REGION_X, BODY_FOCUS_REGION_Y + int(vertMargin))
+click(location)
+
+# SCROLL PROFILES
+print("LinkedIn: scrool prepare")    
+type(Key.DOWN)
+type(Key.DOWN)
+type(Key.DOWN)
+type(Key.DOWN)
+
+for x in range(PARAM_PROFILES_SKIP):
+    profil_scroll_iteration = profil_scroll_iteration + 1    
+    
+    # SCROLL NEXT PROFILE
+    print("LinkedIn: scrool to next profil")        
+    type(Key.DOWN)
+    type(Key.DOWN)
+    type(Key.DOWN)
+    if (profil_scroll_iteration == SCROLL_BUMP_EVERY_OTHER_PROFIL):
+        type(Key.DOWN)
+        profil_scroll_iteration = 0
+    sleep(1)
+
+# DOWNLOAD PROFILES ***********************************************************
 # START
 for x in range(PARAM_PROFILES_TODO):
-    scrollCounter = scrollCounter + 1
+    profil_scroll_iteration = profil_scroll_iteration + 1
     
     # OPEN NEW TAB
     region = Region(450, 215 + int(vertMargin))
@@ -74,9 +111,9 @@ for x in range(PARAM_PROFILES_TODO):
     type(Key.DOWN)
     type(Key.DOWN)
     type(Key.DOWN)
-    if (scrollCounter == SCROLL_BUMP):
+    if (profil_scroll_iteration == SCROLL_BUMP):
         type(Key.DOWN)
-        scrollCounter = 0
+        profil_scroll_iteration = 0
         print("Key.DOWN screen as ")
     sleep(1)
     
