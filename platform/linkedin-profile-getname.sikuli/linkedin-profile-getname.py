@@ -4,6 +4,8 @@ import shutil
 
 # CONST
 ARG_VERTICAL_MARGIN = "0"
+SCREENSHOT_REGION_X = 405
+SCREENSHOT_REGION_Y = 380
 
 # parameters
 if len(sys.argv) > 1:
@@ -16,7 +18,7 @@ type(Key.HOME)
 sleep(0.5)
 
 # SELECT NAME
-location = Location(400, 360 + int(ARG_VERTICAL_MARGIN))
+location = Location(SCREENSHOT_REGION_X, SCREENSHOT_REGION_Y + int(ARG_VERTICAL_MARGIN))
 click(location)
 click(location)
 click(location)
