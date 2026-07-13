@@ -21,18 +21,11 @@ if PARAM_SKIP_NAVTO == False:
     runScript("../platform/cmd-run", 'firefox')    
     runScript("../platform/windows-maximize")
     runScript("../platform/windows-fullscreen")
+    runScript("../platform/firefox-navto-url", "https://www.linkedin.com/")
     runScript("../platform/firefox-zoom-0")
     
     # GET LINKEDIN CONNECTIONS ****************************************************
-
-    # LOAD
-    type("l", KeyModifier.CTRL)
-    paste("https://www.linkedin.com/mynetwork/invite-connect/connections/")
-    type(Key.ENTER)
-    sleep(1)
-
-    # unfocus
-    type(Key.ESC)
+    runScript("../platform/firefox-navto-url", "https://www.linkedin.com/mynetwork/invite-connect/connections/")
 
 # MARGIN TOP
 VERTICAL_MARGIN_FULLSCREEN = "0"
