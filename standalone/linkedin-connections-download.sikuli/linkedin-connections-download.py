@@ -89,19 +89,26 @@ for x in range(PARAM_PROFILES_TODO):
     #url = Env.getClipboard()
     runScript("../platform/linkedin-profile-getname", vertMargin)
     name = Env.getClipboard()
+    
     # TODO: external script ?
     # Encoding with ASCII and replacing errors - DATA ALTERED!
     message_text.encode('utf-8')
     ascii_bytes_replaced = message_text.encode('ascii', errors='replace')
-    questionmark_replaced = ascii_bytes_replaced.replace("?", "");
+    questionmark_replaced = ascii_bytes_replaced.replace("?", "_");
     name = questionmark_replaced
     
-    # SAVE DATAS
     # TAKE HEADER SCREENSHOT    
     runScript("../platform/linkedin-profile-screenshot-head", PARAM_TARGET_DIR + name + "-header.png", vertMargin)
     # TODO: TAKE THUMBNAIL SCREENSHOT
     # TODO: DOWNLOAD CV /details/experience/
-            
+    
+    # SIMULATE SOME ACTIVITY **************************************************
+    sleep(2)
+    type(Key.DOWN)
+    sleep(0.5)    
+    type(Key.PAGE_DOWN) 
+    sleep(3)
+    
     # NEXT LINKEDIN PROFILE ***************************************************
     
     # CLOSE TAB
