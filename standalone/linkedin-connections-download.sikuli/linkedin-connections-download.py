@@ -70,17 +70,17 @@ for x in range(PARAM_PROFILES_TODO):
 
     # OPEN LINKEDIN PROFILE ***************************************************
     
-    # OPEN NEW TAB
     # select profil
-    region = Region(460, 110 + int(vertMargin))
-    # emulate middle click or ctrl+click
-    rightClick(region)
+    profilRegion = Region(460, 110 + int(vertMargin))
+
+    # TODO: external script ?    
+    # new tab: emulate middle click or ctrl+click
+    menuRegion = Region(profilRegion.x + 10, profilRegion.y + 25)
+    rightClick(profilRegion)
     sleep(0.5)
-    region = Region(460, 110 + 25 + int(vertMargin))
-    rightClick(region)
+    rightClick(menuRegion)
     sleep(1)
-    # switch to new tab
-    type("2", Key.CTRL)
+    type(Key.TAB, KEY_CTRL)
     
     # SAVE LINKEDIN PROFILE INFOS *********************************************
     
@@ -103,6 +103,7 @@ for x in range(PARAM_PROFILES_TODO):
     # TODO: DOWNLOAD CV /details/experience/
     
     # SIMULATE SOME ACTIVITY **************************************************
+
     sleep(2)
     type(Key.DOWN)
     sleep(0.5)    
@@ -114,7 +115,7 @@ for x in range(PARAM_PROFILES_TODO):
     # CLOSE TAB
     type("1", Key.CTRL)
     sleep(0.5)
-    
+
     # SCROLL NEXT PROFILE
     print("LinkedIn: scrool to next profil")    
     type(Key.DOWN)
