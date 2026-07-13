@@ -19,14 +19,9 @@ if not os.path.exists(PARAM_TARGET_DIR):
 # browser
 runScript("../platform/cmd-run", 'firefox')    
 runScript("../platform/windows-maximize")
-type(Key.F11) # fullscreen
+runScript("../platform/windows-fullscreen")
+runScript("../platform/firefox-zoom-0")
 
-# TODO: external script ?
-# RESET ZOOM
-type("0", Key.CTRL)
-sleep(0.5)
-type(Key.HOME)
-sleep(0.5)
 
 VERTICAL_MARGIN_FULLSCREEN = "0"
 vertMargin = VERTICAL_MARGIN_FULLSCREEN
