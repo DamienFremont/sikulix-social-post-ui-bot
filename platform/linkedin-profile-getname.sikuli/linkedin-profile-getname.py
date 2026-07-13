@@ -38,6 +38,6 @@ message_text = Env.getClipboard()
 # Encoding with ASCII and replacing errors - DATA ALTERED!
 message_text.encode('utf-8')
 ascii_bytes_replaced = message_text.encode('ascii', errors='replace')
-questionmark_replaced = ascii_bytes_replaced.replace("?", "");
+questionmark_replaced = ascii_bytes_replaced.replace("?", "_");
 
 print("LinkedIn: Profile Name: " + questionmark_replaced)
