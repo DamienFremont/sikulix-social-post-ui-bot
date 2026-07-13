@@ -4,6 +4,7 @@
 PARAM_TARGET_DIR = "C:/Users/damien/Downloads/linkedIn/"
 PARAM_PROFILES_TODO = 20
 PARAM_PROFILES_SKIP = 0
+PARAM_SKIP_NAVTO = True
 if len(sys.argv) > 2:
     PARAM_TARGET_DIR = sys.argv[1]
     PARAM_PROFILES_TODO = sys.argv[2]
@@ -13,29 +14,29 @@ if len(sys.argv) > 2:
 
 if not os.path.exists(PARAM_TARGET_DIR):
     os.makedirs(PARAM_TARGET_DIR)
+ 
+if PARAM_SKIP_NAVTO == False:
+        
+    # INIT BROWSER ****************************************************************    
+    runScript("../platform/cmd-run", 'firefox')    
+    runScript("../platform/windows-maximize")
+    runScript("../platform/windows-fullscreen")
+    runScript("../platform/firefox-zoom-0")
+    
+    # GET LINKEDIN CONNECTIONS ****************************************************
 
-# INIT BROWSER ****************************************************************
+    # LOAD
+    type("l", KeyModifier.CTRL)
+    paste("https://www.linkedin.com/mynetwork/invite-connect/connections/")
+    type(Key.ENTER)
+    sleep(1)
 
-# browser
-runScript("../platform/cmd-run", 'firefox')    
-runScript("../platform/windows-maximize")
-runScript("../platform/windows-fullscreen")
-runScript("../platform/firefox-zoom-0")
+    # unfocus
+    type(Key.ESC)
 
-
+# MARGIN TOP
 VERTICAL_MARGIN_FULLSCREEN = "0"
 vertMargin = VERTICAL_MARGIN_FULLSCREEN
-
-# GET LINKEDIN CONNECTIONS ****************************************************
-
-# LOAD
-type("l", KeyModifier.CTRL)
-paste("https://www.linkedin.com/mynetwork/invite-connect/connections/")
-type(Key.ENTER)
-sleep(1)
-
-# unfocus
-type(Key.ESC)
 
 # SCROLLING
 SCROLL_BUMP_EVERY_OTHER_PROFIL = 3
