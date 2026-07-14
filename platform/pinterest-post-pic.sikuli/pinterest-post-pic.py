@@ -19,7 +19,7 @@ try:
     sleep(1)  
     #click("pinterest-pin-button.png")
     runScript("../platform/firefox-url-goto", "https://fr.pinterest.com/pin-creation-tool/")
-    sleep(1)
+    sleep(2)
     
     # add pict
     click("pinterest-create-upload.png")
