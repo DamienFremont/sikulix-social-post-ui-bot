@@ -38,8 +38,8 @@ try:
 
     # success
     sleep(1)    
-    #wait("bluesky-post-comfirmed.png", 3)
+    wait("bluesky-post-comfirmed.png", 3)
 
 finally:
-    runScript("../platform/windows-takescreenshot", "-twitter") 
+    runScript("../platform/windows-takescreenshot", "-bluesky") 
     keyUp()
