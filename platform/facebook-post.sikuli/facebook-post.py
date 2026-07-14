@@ -32,7 +32,7 @@ try:
     sleep(1)
     
     # submit
-    click("facebook-post-next.png")
+    #click("facebook-post-next.png")
     sleep(3)    
     click("facebook-post-confirm.png")
     sleep(1)
