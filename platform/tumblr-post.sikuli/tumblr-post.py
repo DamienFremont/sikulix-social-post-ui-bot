@@ -48,8 +48,9 @@ try:
     # submit
     click("tumblr-post-submit-2.png")
     
-    #confirm
+    #confirm without tags
     sleep(1)
+    wait("tumblr-post-post-1.png", 3)
     click("tumblr-post-post-1.png")
     sleep(1)
         
