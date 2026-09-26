@@ -1,7 +1,7 @@
 # NOTE: Press Alt+Shift+C to to kill a running Sikuli script.
 
 # CONST
-ARG_ID    = "20240719_220112"
+ARG_ID    = "20240731_193832-2"
 ARG_TEXT  = " - Frimousse, 14 years old, in Nantes, FRANCE. #pet #cat #france #frimoussethecat"
 ARG_TITLE = " - Frimousse, 14 years old, in Nantes, FRANCE."
 ARG_DESCR = " - Check me at https://linktr.ee/frimoussethecat #pet #cat #france #frimoussethecat"
@@ -37,14 +37,14 @@ try:
     runScript("../platform/twitter-post", POST_TEXT, POST_IMAGE)
 
     # Pinterest
-    #runScript("../platform/firefox-container-new", ARG_FFC_ID)
-    #runScript("../platform/pinterest-open")
-    #runScript("../platform/pinterest-post-pic", ARG_TXT, ARG_IMG_FN)
+    runScript("../platform/firefox-container-new", FF_CONT)
+    runScript("../platform/pinterest-open")
+    runScript("../platform/pinterest-post-pic", POST_TITLE, POST_IMAGE, POST_DESCR)
     
     # Imgur
-    #runScript("../platform/firefox-container-new", ARG_FFC_ID)
+    #runScript("../platform/firefox-container-new", FF_CONT)
     #runScript("../platform/imgur-open")
-    #runScript("../platform/imgur-post-pic", ARG_TXT, ARG_IMG_FN)
+    #runScript("../platform/imgur-post-pic", POST_TITLE, POST_IMAGE, POST_DESCR)
     
     # Tumblr
     runScript("../platform/firefox-container-new", FF_CONT)
@@ -74,8 +74,9 @@ try:
     runScript("../platform/threads-post", POST_TEXT, POST_IMAGE)   
     
     # Bluesky
-    #runScript("../platform/firefox-container-new", FF_CONT)
-    #runScript("../platform/firefox-url-goto", "https://bsky.app/profile/frimoussethecat.bsky.social")
+    runScript("../platform/firefox-container-new", FF_CONT)
+    runScript("../platform/bluesky-open")
+    runScript("../platform/bluesky-post-pic", POST_TEXT, POST_IMAGE)
     
     # END ***********************************************
     
