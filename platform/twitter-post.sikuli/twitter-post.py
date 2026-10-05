@@ -10,14 +10,18 @@ if len(sys.argv) > 1:
     
 try:
 
-    # post
-    wait("twitter-post-text-area-2.png", 5)
+    # check
+    wait("tw-post-create-btn.png")
     sleep(1)
 
+    # create
+    click("tw-post-create-btn.png")
+    wait("twitter-post-text-area-2.png",5)
+
     # add pict
-    click("twitter-post-upload.png")
+    click("tw-post-add-img.png")
     sleep(1)
-    
+        
     # select picture
     runScript("firefox-file-upload-2", ARG_IMG_FN)
     sleep(3)
