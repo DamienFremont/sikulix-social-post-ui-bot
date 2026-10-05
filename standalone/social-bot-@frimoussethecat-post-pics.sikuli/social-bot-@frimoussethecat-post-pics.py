@@ -1,7 +1,7 @@
 # NOTE: Press Alt+Shift+C to to kill a running Sikuli script.
 
 # CONST
-ARG_ID    = "20240731_193832-2"
+ARG_ID    = "20240808_193829-2"
 ARG_TEXT  = " - Frimousse, 14 years old, in Nantes, FRANCE. #pet #cat #france #frimoussethecat"
 ARG_TITLE = " - Frimousse, 14 years old, in Nantes, FRANCE."
 ARG_DESCR = " - Check me at https://linktr.ee/frimoussethecat #pet #cat #france #frimoussethecat"
