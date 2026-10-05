@@ -19,6 +19,7 @@ try:
     wait("twitter-post-text-area-2.png",5)
 
     # add pict
+    sleep(2)    
     click("tw-post-add-img.png")
     sleep(1)
         
@@ -27,7 +28,8 @@ try:
     sleep(3)
 
     # add text
-    click("twitter-post-text-area-2.png")
+    wait("twitter-post-text-area-3.png",5)
+    click("twitter-post-text-area-3.png")
     paste(ARG_TXT)
     sleep(1)
     type(Key.ENTER)
