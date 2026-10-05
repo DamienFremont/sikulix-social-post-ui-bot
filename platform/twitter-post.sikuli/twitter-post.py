@@ -11,7 +11,7 @@ if len(sys.argv) > 1:
 try:
 
     # post
-    wait("twitter-post-text-area.png")
+    wait("twitter-post-text-area-2.png", 5)
     sleep(1)
 
     # add pict
@@ -23,7 +23,7 @@ try:
     sleep(3)
 
     # add text
-    click("twitter-post-text-area.png")
+    click("twitter-post-text-area-2.png")
     paste(ARG_TXT)
     sleep(1)
     type(Key.ENTER)
