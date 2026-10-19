@@ -35,12 +35,9 @@ try:
     sleep(2)
     
     # type text
-    type(Key.TAB)
-    type(Key.TAB)
-    type(Key.TAB)
-    type(Key.TAB)
-    type(Key.TAB)
+    click("instagram-post-text.png")
     paste(ARG_TXT)
+    sleep(2)
         
     # submit
     click("insta-post-submit.png")
