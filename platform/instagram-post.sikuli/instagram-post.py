@@ -19,8 +19,6 @@ try:
     
     click("insta-post-create-btn.png")
     sleep(1)
-
-    click("insta-post-post.png")
     
     # upload picture
     click("insta-post-upload.png")
@@ -32,9 +30,9 @@ try:
     
     # next...
     click("insta-post-next.png")
-    sleep(1)
+    sleep(2)
     click("insta-post-next.png")
-    sleep(1)
+    sleep(2)
     
     # type text
     type(Key.TAB)
@@ -43,7 +41,7 @@ try:
     type(Key.TAB)
     type(Key.TAB)
     paste(ARG_TXT)
-    
+        
     # submit
     click("insta-post-submit.png")
     
