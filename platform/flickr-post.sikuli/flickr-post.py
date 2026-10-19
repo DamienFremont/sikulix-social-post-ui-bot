@@ -34,6 +34,7 @@ try:
 
     # submit
     click("flickr-post-submit-1.png")
+    sleep(2)    
     click("flickr-post-submit2.png")
     sleep(1)
 
