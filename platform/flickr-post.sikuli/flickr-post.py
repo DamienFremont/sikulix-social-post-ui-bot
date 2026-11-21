@@ -13,7 +13,8 @@ if len(sys.argv) > 1:
 try:
 
     # post
-    click("flickr-post-create-2.png")
+    sleep(1)
+    runScript("firefox-url-goto", "https://www.flickr.com/photos/upload/")
     sleep(1)
 
     # upload picture
