@@ -10,7 +10,6 @@ if len(sys.argv) > 1:
 
 # open run
 type("r", KeyModifier.WIN)
-wait("1683899892400-1.png")
 
 sleep(1)
 
