@@ -29,10 +29,18 @@ try:
     sleep(1)
     
     # submit
-    wait("threads-post-confirm.png", 30)
-    click("threads-post-confirm.png")
-    sleep(1)
-    
+    sleep(3)
+    type(Key.TAB)
+    type(Key.TAB)
+    type(Key.TAB)
+    type(Key.TAB)
+    type(Key.TAB)
+    type(Key.TAB)
+    type(Key.TAB)
+    type(Key.TAB)
+    type(Key.TAB)
+    type(Key.ENTER)
+
 finally:
     runScript("../platform/windows-takescreenshot", "-threads")
     keyUp()
