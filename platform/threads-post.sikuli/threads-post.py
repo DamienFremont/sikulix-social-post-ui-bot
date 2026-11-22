@@ -26,20 +26,10 @@ try:
     
     # select picture
     runScript("firefox-file-upload-2", ARG_IMG_FN)
-    sleep(1)
+    sleep(3)
     
     # submit
-    sleep(3)
-    type(Key.TAB)
-    type(Key.TAB)
-    type(Key.TAB)
-    type(Key.TAB)
-    type(Key.TAB)
-    type(Key.TAB)
-    type(Key.TAB)
-    type(Key.TAB)
-    type(Key.TAB)
-    type(Key.ENTER)
+    click("threads-post-confirm4.png")   
 
 finally:
     runScript("../platform/windows-takescreenshot", "-threads")
