@@ -11,39 +11,24 @@ if len(sys.argv) > 1:
 try:
     
     # post
-    wait("mastodon-post-create.png")
+    click("mastodon-post-create2.png")
 
+    # add text
     sleep(1)
+    paste(ARG_TXT)
+    sleep(1)
+    type(Key.SPACE)
     
     # upload picture
-    click("mastodon-post-upload.png")
+    click("20261121_182048.png")
     sleep(1)
     
     # select picture
     runScript("firefox-file-upload-2", ARG_IMG_FN)
-    
-    # uploaded
-    wait("mastodon-post-uploading.png", 10)
-    # wait_notexists(...)
-    timeout = 30
-    time_cnt = 0
-    while(True):
-        time_cnt = time_cnt + 1
-        if time_cnt > timeout:
-            Debug.error('wait_notexists() timeout: ' + str(timeout))
-            break
-        if exists("mastodon-post-uploading.png"):
-            wait(1)
-        else:
-            break
-    
-    # add text
-    click("mastodon-post-create.png")
-    sleep(0.5)
-    paste(ARG_TXT)
-        
+    sleep(3)    
+            
     # submit
-    click("mastodon-post-submit-2.png")
+    click("mastodon-post-confirm.png")
     
     # access
     click("mastodon-post-access-3.png")
