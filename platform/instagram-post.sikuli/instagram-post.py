@@ -36,8 +36,9 @@ try:
     
     # type text
     click("instagram-post-text.png")
-    paste(ARG_TXT)
-    sleep(2)
+    Settings.TypeDelay = 0.1
+    type(ARG_TXT)
+    sleep(1)
         
     # submit
     click("insta-post-submit.png")
