@@ -1,7 +1,7 @@
 import sys.argv
 
 ARG_TXT = "20230611_222051 #pet #cat #tabbycat #france @frimoussethecat (o.o)"
-ARG_IMG_FN = "file:c:/Users/damien/SynologyDrive/workdir/project-frimousse-social/20230611_222051-compressed.jpg"
+ARG_IMG_FN = "file:C:\Windows\Web\Wallpaper\Windows\img0.jpg"
 
 # parameters
 if len(sys.argv) > 1:
@@ -14,7 +14,6 @@ try:
     wait("insta-menu.png", 30)
     
     # post
-
     mouseMove("insta-menu-2.png")
     
     click("insta-post-create-btn.png")
@@ -29,6 +28,7 @@ try:
     sleep(1)
     
     # next...
+    wait("insta-post-next.png", 5)
     click("insta-post-next.png")
     sleep(2)
     click("insta-post-next.png")
@@ -36,9 +36,7 @@ try:
     
     # type text
     click("instagram-post-text.png")
-    Settings.TypeDelay = 0.1
-    type(ARG_TXT)
-    sleep(1)
+    runScript("../platform/windows-typelikehuman", ARG_TXT)
         
     # submit
     click("insta-post-submit.png")
