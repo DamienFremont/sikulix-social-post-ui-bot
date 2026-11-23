@@ -1,6 +1,6 @@
 import sys.argv
 
-ARG_IMAGE = "file:c:/Users/damien/workspace/project-frimousse-social/20240626_111533-compressed.jpg"
+ARG_IMAGE = "file:C:\Windows\Web\Wallpaper\Windows\img0.jpg"
 ARG_TITLE = "20240626_111533 - Meow in Nantes, FRANCE"
 ARG_DESCR = "20240626_111533 - Meow in Nantes, FRANCE. Check me at https://linktr.ee/frimoussethecat #pet #cat #france #frimoussethecat"
 

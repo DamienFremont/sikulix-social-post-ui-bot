@@ -1,7 +1,7 @@
 import sys.argv
 
 ARG_TXT = "20240719_220112 #pet #cat #tabbycat #france @frimoussethecat (o.o)"
-ARG_IMG_FN = "file:c:/Users/damien/SynologyDrive/workdir/project-frimousse-social/20240719_220112-compressed.jpg"
+ARG_IMG_FN = "file:C:\Windows\Web\Wallpaper\Windows\img0.jpg"
 
 # parameters
 if len(sys.argv) > 1:

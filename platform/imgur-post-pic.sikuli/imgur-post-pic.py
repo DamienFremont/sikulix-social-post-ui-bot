@@ -1,7 +1,7 @@
 import sys.argv
 
 ARG_TITLE = "TEST #pet #cat #tabbycat #france @frimoussethecat (o.o)"
-ARG_IMAGE = "file:c:/Users/damien/workspace/project-frimousse-social/folder.jpg"
+ARG_IMAGE = "file:C:\Windows\Web\Wallpaper\Windows\img0.jpg"
 ARG_DESCR = "20110001 #pet #cat #tabbycat #france @frimoussethecat (o.o https://linktr.ee/frimoussethecat)"
 
 # parameters

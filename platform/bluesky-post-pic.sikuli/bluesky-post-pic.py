@@ -1,7 +1,7 @@
 import sys.argv
 
 ARG_TXT = "TEST #pet #cat #tabbycat #france #frimoussethecat (o.o)"
-ARG_IMG = "file:c:/Users/damien/workspace/project-frimousse-social/folder.jpg"
+ARG_IMG = "file:C:\Windows\Web\Wallpaper\Windows\img0.jpg"
 
 # parameters
 if len(sys.argv) > 1:
