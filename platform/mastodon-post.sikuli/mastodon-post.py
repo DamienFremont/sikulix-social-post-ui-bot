@@ -15,7 +15,7 @@ try:
 
     # add text
     sleep(1)
-    paste(ARG_TXT)
+    runScript("../platform/windows-typelikehuman", ARG_TXT)
     sleep(1)
     type(Key.SPACE)
     

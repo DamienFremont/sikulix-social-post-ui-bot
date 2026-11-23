@@ -30,7 +30,7 @@ try:
     # add text
     wait("twitter-post-text-area-3.png",5)
     click("twitter-post-text-area-3.png")
-    paste(ARG_TXT)
+    runScript("../platform/windows-typelikehuman", ARG_TXT)
     sleep(1)
     type(Key.ENTER)
 

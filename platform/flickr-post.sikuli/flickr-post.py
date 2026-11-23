@@ -27,11 +27,11 @@ try:
 
     # type description
     click("flickr-post-desc.png")
-    paste(ARG_DESCR)
+    runScript("../platform/windows-typelikehuman", ARG_DESCR)
     
     # type title
     type(Key.TAB, KeyModifier.SHIFT)
-    paste(ARG_TITLE)
+    runScript("../platform/windows-typelikehuman", ARG_TITLE)
 
     # submit
     click("flickr-post-submit-1.png")

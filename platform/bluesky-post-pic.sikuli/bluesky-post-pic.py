@@ -22,7 +22,7 @@ try:
     # add text
     sleep(1)
     click("bluesky-post-txt.png")
-    paste(ARG_TXT)
+    runScript("../platform/windows-typelikehuman", ARG_TXT)
     
     # upload picture
     click("bluesky-post-upload.png")

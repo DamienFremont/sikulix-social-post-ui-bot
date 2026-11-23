@@ -17,7 +17,7 @@ try:
     # type text
     click("cara-post-text.png")
     sleep(1)    
-    paste(ARG_TXT)
+    runScript("../platform/windows-typelikehuman", ARG_TXT)
 
     # upload picture
     click("cara-post-upload.png")

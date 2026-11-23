@@ -28,7 +28,7 @@ try:
     sleep(2)
    
     # add text
-    paste(ARG_TXT)
+    runScript("../platform/windows-typelikehuman", ARG_TXT)
     sleep(1)
     
     # submit

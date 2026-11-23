@@ -37,7 +37,8 @@ try:
     # type text
     click("instagram-post-text.png")
     runScript("../platform/windows-typelikehuman", ARG_TXT)
-        
+    sleep(1)
+    
     # submit
     click("insta-post-submit.png")
     

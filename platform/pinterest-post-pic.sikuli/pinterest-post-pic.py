@@ -31,12 +31,12 @@ try:
 
     # add title
     click("pinterest-create-title.png")
-    paste(ARG_TITLE)
+    runScript("../platform/windows-typelikehuman", ARG_TITLE)
     sleep(1)
 
     # add description
     click("pinterest-post-form-description.png")
-    paste(ARG_DESCR)
+    runScript("../platform/windows-typelikehuman", ARG_DESCR)
     sleep(1)
 
     # select board
