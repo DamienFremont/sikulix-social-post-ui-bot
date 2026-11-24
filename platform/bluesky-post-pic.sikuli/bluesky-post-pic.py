@@ -1,12 +1,12 @@
 import sys.argv
 
 ARG_TXT = "TEST #pet #cat #tabbycat #france #frimoussethecat (o.o)"
-ARG_IMG = "file:C:\Windows\Web\Wallpaper\Windows\img0.jpg"
+ARG_IMAGE = "file:C:\Windows\Web\Wallpaper\Windows\img0.jpg"
 
 # parameters
 if len(sys.argv) > 1:
     ARG_TXT = sys.argv[1]
-    ARG_IMG = sys.argv[2]
+    ARG_IMAGE = sys.argv[2]
 
 try:
     
@@ -29,7 +29,7 @@ try:
     sleep(1)
     
     # select picture
-    runScript("firefox-file-upload-2", ARG_IMG)
+    runScript("firefox-file-upload-2", ARG_IMAGE)
     sleep(1)
     
     # submit
