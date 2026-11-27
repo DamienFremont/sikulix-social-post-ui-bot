@@ -1,11 +1,11 @@
 import sys.argv
 
-ARG_TXT = "20230611_222051 #pet #cat #tabbycat #france @frimoussethecat (o.o)"
+ARG_TEXT = "20230611_222051 #pet #cat #tabbycat #france @frimoussethecat (o.o)"
 ARG_IMAGE = "file:C:\Windows\Web\Wallpaper\Windows\img0.jpg"
 
 # parameters
 if len(sys.argv) > 1:
-    ARG_TXT = sys.argv[1]
+    ARG_TEXT = sys.argv[1]
     ARG_IMAGE = sys.argv[2]
 
 try:
@@ -36,7 +36,7 @@ try:
     
     # type text
     click("instagram-post-text.png")
-    runScript("../platform/windows-typelikehuman", ARG_TXT)
+    runScript("../platform/windows-typelikehuman", ARG_TEXT)
     sleep(1)
 
     # submit

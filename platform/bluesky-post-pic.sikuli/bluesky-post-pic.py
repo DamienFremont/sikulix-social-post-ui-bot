@@ -1,11 +1,11 @@
 import sys.argv
 
-ARG_TXT = "TEST #pet #cat #tabbycat #france #frimoussethecat (o.o)"
+ARG_TEXT = "TEST #pet #cat #tabbycat #france #frimoussethecat (o.o)"
 ARG_IMAGE = "file:C:\Windows\Web\Wallpaper\Windows\img0.jpg"
 
 # parameters
 if len(sys.argv) > 1:
-    ARG_TXT = sys.argv[1]
+    ARG_TEXT = sys.argv[1]
     ARG_IMAGE = sys.argv[2]
 
 try:
@@ -22,7 +22,7 @@ try:
     # add text
     sleep(1)
     click("bluesky-post-txt.png")
-    runScript("../platform/windows-typelikehuman", ARG_TXT)
+    runScript("../platform/windows-typelikehuman", ARG_TEXT)
     
     # upload picture
     click("bluesky-post-upload.png")
