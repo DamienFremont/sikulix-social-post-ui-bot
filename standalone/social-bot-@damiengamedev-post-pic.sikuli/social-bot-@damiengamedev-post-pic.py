@@ -38,12 +38,12 @@ try:
     # pinterest
     #runScript("../platform/firefox-container-new", ARG_FFC_ID)
     #runScript("../platform/pinterest-open")
-    #runScript("../platform/pinterest-post-pic", ARG_TXT, ARG_IMG_FN)
+    #runScript("../platform/pinterest-post-pic", ARG_TEXT, ARG_IMAGE)
     
     # imgur
     #runScript("../platform/firefox-container-new", ARG_FFC_ID)
     #runScript("../platform/imgur-open")
-    #runScript("../platform/imgur-post-pic", ARG_TXT, ARG_IMG_FN)
+    #runScript("../platform/imgur-post-pic", ARG_TEXT, ARG_IMAGE)
     
     # tumblr
     #runScript("../platform/firefox-container-new", FF_CONT)
